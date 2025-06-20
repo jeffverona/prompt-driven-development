@@ -101,3 +101,16 @@ it('should sum two numbers', () => {
 });
 ```
 
+## 5. Adicione os scripts ao package.json, nesse momento esses sao os unicos scripts que devem estar la
+
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --runInBand test/",
+    "test:dev": "NODE_OPTIONS=--experimental-vm-modules npx jest --runInBand --watchAll test/",
+    "test:debug": "node --experimental-vm-modules --inspect-brk node_modules/jest/bin/jest.js --runInBand --watchAll test/"
+  },
+
+## 6. Rode o npm i
+
+## 7. adicione a node modules ao .gitignore
+
+## 8. commite tudo que foi feito até aqui
