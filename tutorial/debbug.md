@@ -86,12 +86,12 @@ export default config;
 
 ## 4. Testes de exemplo
 
-Crie a pasta `test/` na raiz e adicione o arquivo `template.test.ts`:
+Crie a pasta `test/` na raiz e adicione o arquivo `template.test.js`:
 
 ```ts
 import { it, expect } from '@jest/globals';
 
-function sum(a: number, b: number): number {
+function sum(a, b) {
   return a + b;
 }
 
