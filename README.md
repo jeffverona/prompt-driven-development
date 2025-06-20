@@ -37,10 +37,28 @@ cd prompt-driven-development
 
 ```
 .
-├── AGENTS.md          # Agent definitions and roles
-├── README.md          # This file
-├── frontend/          # Front-end scaffold (optional)
-│   └── README.md
-└── tasks/             # Task (prompt) definitions
-    └── 001_sample_task.md
+/services
+└── auth/
+    ├── login/
+    │   ├── handler.ts          # API route ou controller
+    │   ├── login.ts            # Regra de negócio (não precisa chamar de use-case)
+    │   ├── validator.ts        # Validação (zod, yup, schema)
+    │   └── dto.ts              # Tipagem de entrada e saída
+    │
+    ├── register/
+    │   ├── handler.ts
+    │   ├── register.ts
+    │   ├── validator.ts
+    │   └── dto.ts
+    │
+    ├── refresh-token/
+    │   ├── handler.ts
+    │   ├── refresh-token.ts
+    │   ├── validator.ts
+    │   └── dto.ts
+    │
+    └── shared/
+        ├── auth-provider.ts    # JWT, Clerk, etc.
+        ├── user-repository.ts  # Prisma, DB, etc.
+        └── constants.ts
 ```
